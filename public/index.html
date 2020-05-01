@@ -2,10 +2,32 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>POKEDEX</title>
+        <title>My Pokédex</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <link rel="shortcut icon" href="./images/favicon.ico" />
     </head>
 
     <body>
+
+        <div class="container">
+            <div id="search">
+                <img src="./images/pokemon-logo-reduce.png" class="img-fluid mx-auto d-block" />
+                <form id="form-serach">
+                    <input type="text" class="form-control" placeholder="Insert a pokemon name here..." />
+                    <button type="button" class="btn btn-warning mx-auto d-block"><i class="fa fa-search"></i> Search</button>
+                </form>
+            </div>
+            <div id="pokemon-list">
+                POKEMON LIST
+            </div>
+
+            <div class="content"></div>
+
+        </div>
+
         <script src="./bundle.js"></script>
     </body>
 </html>

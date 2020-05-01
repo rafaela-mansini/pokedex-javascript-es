@@ -12,6 +12,15 @@ class Pokemon {
             console.warn('Um erro ocorreu na API', error);
         }
     }
+
+    async list(offset=0, limit=50){
+        try {
+            const response = await axios.get(`${url_api}pokemon/?offset=${offset}&limit=${limit}`);
+            return response.data;
+        } catch (error) {
+            console.warn('Um erro ocorreu na API', error);
+        }
+    }
 }
 
 const pokemon = new Pokemon();
