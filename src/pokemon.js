@@ -13,7 +13,7 @@ class Pokemon {
         }
     }
 
-    async list(offset=0, limit=50){
+    async list(offset=0, limit=100){
         try {
             const response = await axios.get(`${url_api}pokemon/?offset=${offset}&limit=${limit}`);
             return response.data;

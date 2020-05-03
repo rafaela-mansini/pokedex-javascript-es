@@ -1,3 +1,8 @@
 #search{ margin: 80px 0; }
 #search img, #search input{ margin-bottom: 20px; }
 #search button{ min-width: 250px; }
+
+#pokemon_list{text-transform: capitalize;}
+#pokemon_list li{list-style: none; border: 0.5px solid #ccc;}
+#pokemon_list li:hover{border-color: #000; font-weight: bold; cursor: pointer;}
+#pokemon_list img{width: 100px;}
