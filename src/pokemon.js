@@ -7,7 +7,7 @@ class Pokemon {
     async get(name) {
         try {
             const response = await axios.get(`${url_api}pokemon/${name}`);
-            console.log(response);
+            return response.data;
         } catch (error) {
             console.warn('Um erro ocorreu na API', error);
         }
