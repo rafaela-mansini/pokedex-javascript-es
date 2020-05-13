@@ -10,6 +10,7 @@ class App {
         this.list_ul = document.getElementById('pokemon_list');
         this.form = document.getElementById('form-serach');
         this.input = document.querySelector('input[name=search]');
+        this.div_information = document.querySelector('#pokemon_information');
 
         this.registerHandlers();
 
@@ -35,7 +36,29 @@ class App {
         let info = this.pokemon_info;
         console.log('pokemon', info['name']);
         
+        this.list_ul.setAttribute('style', 'display:none');
+
+        document.querySelector('#pokemon_information img').setAttribute('src', info.sprites.front_default);
+        document.querySelector('#name').innerHTML = info['name'];
+        document.querySelector('#weight').innerHTML = info['weight'];
+        document.querySelector('#height').innerHTML = info['height'];
+        document.querySelector('#fire').innerHTML = info.types[0].type.name;
+        this.div_information.classList.remove('invisible');
+
+        //this.renderTypes(info['types']);
+
         
+    }
+
+    renderTypes(types){
+        let div_types = document.createElement('div');
+        let content_types = '<h3>Types</h3><ul id="types">';
+        types.forEach(type => {
+            content_types += `<li>${type.type['name']}</li>`;
+        });
+
+        div_types.innerHTML = content_types;
+        this.div_information.appendChild(div_types);
     }
 
     async renderList(){

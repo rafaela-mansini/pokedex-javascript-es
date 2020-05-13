@@ -13,17 +13,27 @@
     <body>
 
         <div class="container">
-            <div id="search">
+            <div class="col-md-12" id="search">
                 <img src="./images/pokemon-logo-reduce.png" class="img-fluid mx-auto d-block" />
                 <form id="form-serach">
                     <input type="text" name="search" class="form-control" placeholder="Insert a pokemon name here..." />
                     <button type="submit" class="btn btn-warning mx-auto d-block"><i class="fa fa-search"></i> Search</button>
                 </form>
             </div>
+            
+            <div class="content">
+                <div id="pokemon_information" class="col-md-4 offset-4 invisible">
+                    <img class="mx-auto d-block" />
+                    <h2 id="name"></h2>
+                    <ul>
+                        <li>Class <br/><span class="strong" id="fire"></span></li>
+                        <li>Weight  <br/><span class="strong" id="weight"></span></li>
+                        <li>Height  <br/><span class="strong" id="height"></span></li>
+                    </ul>
+                </div>
+            </div>
+            
             <ul class="row" id="pokemon_list"></ul>
-
-            <div class="content"></div>
-
         </div>
 
         <script src="./bundle.js"></script>

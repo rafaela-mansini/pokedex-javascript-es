@@ -6,3 +6,10 @@
 #pokemon_list li{list-style: none; border: 0.5px solid #ccc;}
 #pokemon_list li:hover{border-color: #000; font-weight: bold; cursor: pointer;}
 #pokemon_list img{width: 100px;}
+
+#pokemon_information{background: #f3f3f3; min-height: 50px; margin-bottom: 20px; padding: 20px 15px 50px;}
+#pokemon_information h2{text-align: center; text-transform: capitalize;}
+#pokemon_information img{width: 170px;}
+#pokemon_information ul { list-style: none; display: flex; padding: 0; }
+#pokemon_information li { float: left; text-align: center; flex: auto; justify-content: space-between; text-transform: capitalize; }
+.strong{font-weight: bold;}
