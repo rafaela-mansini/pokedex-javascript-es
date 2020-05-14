@@ -45,17 +45,18 @@ class App {
         document.querySelector('#fire').innerHTML = info.types[0].type.name;
         this.div_information.classList.remove('invisible');
 
-        //this.renderTypes(info['types']);
+        this.renderTypes(info['types']);
 
         
     }
 
     renderTypes(types){
         let div_types = document.createElement('div');
-        let content_types = '<h3>Types</h3><ul id="types">';
+        let content_types = '<p class="component-title">Types</p><div class="row">';
         types.forEach(type => {
-            content_types += `<li>${type.type['name']}</li>`;
+            content_types += `<div class="col-md-4 text-capitalize">${type.type['name']}</div>`;
         });
+        content_types += '</div>';
 
         div_types.innerHTML = content_types;
         this.div_information.appendChild(div_types);
