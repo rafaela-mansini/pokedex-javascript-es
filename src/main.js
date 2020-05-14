@@ -45,10 +45,23 @@ class App {
         document.querySelector('#fire').innerHTML = info.types[0].type.name;
         this.div_information.classList.remove('invisible');
 
+        this.renderStats(info['stats']);
         this.renderAbilities(info['abilities']);
         this.renderTypes(info['types']);
 
         
+    }
+
+    renderStats(stats){
+        let div = document.createElement('div');
+        let content = '<p class="component-title">Stats</p>';
+
+        stats.forEach(stat => {
+            content += `<div class="progress"><div class="progress-bar" role="progressbar" style="width: ${stat['base_stat']}%;" aria-valuenow="${stat['base_stat']}" aria-valuemin="0" aria-valuemax="100">${stat['base_stat']}: ${stat.stat['name']}</div></div>`;
+        });
+
+        div.innerHTML = content;
+        this.div_information.appendChild(div);
     }
 
     renderAbilities(abilities){

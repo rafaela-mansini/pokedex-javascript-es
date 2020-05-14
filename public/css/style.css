@@ -14,3 +14,5 @@
 #pokemon_information li { float: left; text-align: center; flex: auto; justify-content: space-between; text-transform: capitalize; }
 .strong{font-weight: bold;}
 .component-title{    background: #ffcc01; padding: 5px 10px; font-weight: bold; text-align: center; margin-top: 20px; }
+#pokemon_information .progress{ margin: 5px 0; font-size: 15px; }
+#pokemon_information .progress-bar{ text-align: left; }
