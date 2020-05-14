@@ -45,9 +45,22 @@ class App {
         document.querySelector('#fire').innerHTML = info.types[0].type.name;
         this.div_information.classList.remove('invisible');
 
+        this.renderAbilities(info['abilities']);
         this.renderTypes(info['types']);
 
         
+    }
+
+    renderAbilities(abilities){
+        let div = document.createElement('div');
+        let content = '<p class="component-title">Abilities</p><div class="row">';
+        abilities.forEach(ability => {
+            content += `<div class="col-md-4 text-capitalize">${ability.ability['name']}</div>`;
+        });
+        content += '</div>';
+
+        div.innerHTML = content;
+        this.div_information.appendChild(div);
     }
 
     renderTypes(types){
